@@ -1,0 +1,80 @@
+#recits-custom-profile {
+    // position: fixed;
+    // left: 160px;
+    // top: 32px;
+    // right: 0;
+    // bottom: 0;
+    // padding: 3rem;
+    // background: #f9f7f4;
+    // overflow: scroll;
+    // max-width:650px;
+}
+#recits-custom-profile-content {
+    display: grid;
+    grid-template-columns: repeat(2,300px);
+    // grid-template-columns:repeat(auto-fill, minmax(800px, 1fr));
+    // flex-wrap: wrap;
+    // align-items: flex-start;
+    // justify-content: space-between;
+    gap: 20px;
+
+    .user-field {
+        // flex: 1;
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+    }
+    .regular-text {
+        width: auto;
+    }
+
+    input {
+        padding: 10px 18px;
+        border: 1px solid #cfcec5;
+        border-radius: 5px;
+    }
+    label {
+        font-weight: 700;
+    }
+
+    .user-field:has(#membre_adresse_ligne_1),
+    .user-field:has(#url),
+    .user-field:has(#membre_collaborateur_avec_qui_collaborer),
+    h2 {
+        grid-column: 1 / span 2;
+    }
+}
+
+body.folded {
+    #recits-custom-profile {
+        left: 35px;
+    }
+}
+
+// body.profile-role-membre_regulier {
+//     #your-profile {
+//         .form-table:first-of-type,
+//         &:nth-child(-n + 4 of table.form-table),
+//         .user-nickname-wrap,
+//         .user-display-name-wrap{
+//             display: none;
+//         }
+//     }
+// }
+
+@media screen and (max-width: 680px) {
+    #recits-custom-profile-content {
+        display: block;
+
+        .user-field {
+            margin-bottom: 25px;
+        }
+    }
+}
+@media screen and (max-width: 782px) {
+    body.folded {
+        #recits-custom-profile {
+            left: 0;
+        }
+    }
+}

@@ -1,0 +1,46 @@
+#input_4_18 {
+  --gf-form-gap-y: 20px !important;
+}
+#input_4_18 .gchoice_4_18_0 input,
+#input_4_18 .gchoice_4_18_2 input,
+#input_4_18 .gchoice_4_18_5 input {
+  display: none;
+  pointer-events: none;
+}
+#input_4_18 .gchoice_4_18_0 label,
+#input_4_18 .gchoice_4_18_2 label,
+#input_4_18 .gchoice_4_18_5 label {
+  font-weight: 700;
+  pointer-events: none;
+  margin-left: 0;
+  font-size: 16px;
+}
+
+#gform_4 .gform-theme--foundation .gfield textarea.large {
+  min-block-size: 13rem !important;
+}
+
+.user-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: 40px 20px;
+}
+.user-list li {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+}
+.user-list li * {
+  margin: 0;
+}
+.user-list li figure {
+  border-radius: 500px;
+  aspect-ratio: 1/1;
+}
+.user-list li figure img {
+  border-radius: 500px;
+  object-fit: cover;
+  width: 180px;
+  aspect-ratio: 1/1;
+}

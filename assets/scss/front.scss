@@ -1,0 +1,49 @@
+#input_4_18 {
+    --gf-form-gap-y: 20px !important;
+    .gchoice_4_18_0,
+    .gchoice_4_18_2,
+    .gchoice_4_18_5 {
+        input {
+            display: none;
+            pointer-events: none;
+        }
+        label {
+            font-weight: 700;
+            pointer-events: none;
+            margin-left: 0;
+            font-size: 16px;
+        }
+    }
+}
+#gform_4 {
+    .gform-theme--foundation .gfield textarea.large {
+        min-block-size: 13rem !important;
+    }
+}
+
+.user-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 40px 20px;
+    li {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 5px;
+        * {
+            margin: 0;
+        }
+        figure {
+            border-radius: 500px;
+            aspect-ratio: 1/1;
+            
+            img {
+                border-radius: 500px;
+                object-fit: cover;
+                width: 180px;
+                // height: 180px;
+                aspect-ratio: 1/1;
+            }
+        }
+    }
+}

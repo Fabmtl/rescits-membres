@@ -1,0 +1,45 @@
+#recits-custom-profile-content {
+  display: grid;
+  grid-template-columns: repeat(2, 300px);
+  gap: 20px;
+}
+#recits-custom-profile-content .user-field {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+#recits-custom-profile-content .regular-text {
+  width: auto;
+}
+#recits-custom-profile-content input {
+  padding: 10px 18px;
+  border: 1px solid #cfcec5;
+  border-radius: 5px;
+}
+#recits-custom-profile-content label {
+  font-weight: 700;
+}
+#recits-custom-profile-content .user-field:has(#membre_adresse_ligne_1),
+#recits-custom-profile-content .user-field:has(#url),
+#recits-custom-profile-content .user-field:has(#membre_collaborateur_avec_qui_collaborer),
+#recits-custom-profile-content h2 {
+  grid-column: 1/span 2;
+}
+
+body.folded #recits-custom-profile {
+  left: 35px;
+}
+
+@media screen and (max-width: 680px) {
+  #recits-custom-profile-content {
+    display: block;
+  }
+  #recits-custom-profile-content .user-field {
+    margin-bottom: 25px;
+  }
+}
+@media screen and (max-width: 782px) {
+  body.folded #recits-custom-profile {
+    left: 0;
+  }
+}
