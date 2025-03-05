@@ -18,25 +18,25 @@
             'order'   => 'ASC',
         ];
 
+        
         $users = get_users($args);
 
+        // ob_start();
+        // $output = ob_get_clean();
         $output = '<ul class="user-list">';
 
         foreach ($users as $user) {
 
             $userId         = $user->ID;
             $user_full_name = $user->display_name;
-            // $user_type = get_user_meta($userId, 'membre_categorie', true);
-            // if (empty($user_type)) {
+
             $role      = get_role($user->roles[0])->name;
             $user_type = $role ? wp_roles()->get_names()[$role] : '';
-            // }
-            // echo '<pre>';
-            // var_dump(get_role($user->roles[0]));
-            // echo '</pre>';
+
             $user_photo = false;
             $lien       = false;
             $bio        = false;
+            
             switch ($atts['type']) {
                 case 'membre_collaborateur_citoyen':
                     /**

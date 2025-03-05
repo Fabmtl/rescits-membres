@@ -22,13 +22,15 @@ register_activation_hook(__FILE__, 'rescits_add_user_roles');
 
 function rescits_membres_styles()
 {
-    if( is_page( 52 ) ){ //liste des membres
+    global $post;
+    if( is_page(array(52,1770,1765,2203)) ){ //liste des membres
         wp_enqueue_style('rescits-membres-style', plugin_dir_url(__FILE__) . '/assets/css/front.css', array(), false, "screen");
-        wp_enqueue_script('rescits-smembres-1', plugin_dir_url(__FILE__) . "/assets/js/modal-membres-min.js", array('jquery'), null, true);
-        wp_enqueue_script('rescits-smembres-2', plugin_dir_url(__FILE__) . "/assets/js/apparition-des-membres-min.js", array('jquery'), null, true);
+        wp_enqueue_script('rescits-modal-membres', plugin_dir_url(__FILE__) . "/assets/js/modal-membres-min.js", array('jquery'), null, true);
+        wp_enqueue_script('rescits-apparition-membres', plugin_dir_url(__FILE__) . "/assets/js/apparition-des-membres-min.js", array('jquery'), null, true);
     }
 }
 add_action('wp_enqueue_scripts', 'rescits_membres_styles', 999);
+
 
 function rescits_membres_admin_styles()
 {

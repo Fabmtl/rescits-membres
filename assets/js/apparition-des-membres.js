@@ -23,11 +23,20 @@
                     gsap.to(batch, {
                         y: 0,
                         opacity: 1,
-                        duration: 1,
-                        stagger: 0.15,
+                        duration: 0.6,
+                        stagger: 0.3,
                         overwrite: true,
                     });
                 },
+            });
+
+            const selectedOption = document.querySelector(".selected-option"); 
+
+            selectedOption.addEventListener("click", function () {
+                const optionsContainer = document.querySelector(".options-container");
+                const svgIcon = document.querySelector(".svg-icon");
+                       optionsContainer.classList.toggle("active");
+                       svgIcon.classList.toggle("active");
             });
 
         });
