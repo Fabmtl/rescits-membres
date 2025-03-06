@@ -1,0 +1,88 @@
+/**
+ * The following styles get applied both on the front of your site
+ * and in the editor.
+ *
+ * Replace them with your own styles or remove the file completely.
+ */
+
+ .absolute-wrapper-select {
+	position: relative;
+	padding-bottom: 50px;
+  }
+  
+  .wrapper-select {
+	overflow: hidden;
+	border-radius: 22px;
+	padding: 0;
+	position: absolute;
+	box-sizing: border-box;
+	padding-bottom: 15px;
+	width: fit-content;
+	min-height: 50px;
+	z-index: 200;
+  }
+  .wrapper-select p {
+	margin: 0;
+	line-height: 1;
+  }
+  .wrapper-select .selected-option {
+	cursor: pointer;
+	box-sizing: border-box;
+	background-color: #fff;
+	box-shadow: 0px 7px 15px -7px rgba(0, 0, 0, 0.25);
+	padding: 5px 27px;
+	border-radius: 22px;
+	height: 44px;
+	line-height: 1;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	font-size: 18px;
+	font-weight: 700;
+	position: relative;
+	top: 0;
+	left: 0;
+	gap: 10px;
+	width: 100%;
+	border: 1px solid #f0f0f0;
+	margin: 0;
+  }
+  .wrapper-select .selected-option p {
+	white-space: nowrap;
+  }
+  .wrapper-select .selected-option .svg-icon {
+	max-width: 15px;
+	transition: transform 300ms cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  }
+  .wrapper-select .selected-option .svg-icon.active {
+	transform: rotate(180deg);
+  }
+  .wrapper-select .options-container {
+	background-color: #fff;
+	margin-top: -120px;
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+	padding: 0;
+	margin-left: 15px;
+	margin-right: 15px;
+	border-radius: 0 0 22px 22px;
+	max-height: 0;
+	transition: margin-top 300ms cubic-bezier(0.175, 0.885, 0.32, 1.275), transform 300ms cubic-bezier(0.175, 0.885, 0.32, 1.275), max-height 300ms cubic-bezier(0.175, 0.885, 0.32, 1.275); 
+}
+.wrapper-select .options-container.active {
+	margin-top: -3px;
+	padding: 20px 27px 27px 27px;
+	box-shadow: 0px 7px 15px -7px rgba(0, 0, 0, 0.25);
+	border: 1px solid #dbdbdb;
+	max-height: 300px;
+  }
+  .wrapper-select .options-container p a {
+	color: var(--wp--preset--color--darkgrey);
+	text-decoration: none;
+	line-height: 1.1;
+  }
+  .wrapper-select .options-container p a:hover {
+	text-decoration: underline;
+  }
+  

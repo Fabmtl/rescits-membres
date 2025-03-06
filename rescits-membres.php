@@ -59,7 +59,7 @@ function rescits_add_profile_role_to_body_class($classes)
 }
 
 function popover_footer(){
-    if( is_page( 52 ) ){ //liste des membres
+    if( is_page( [52,2203] ) ){ //liste des membres
         ?>
         <div id="modal-overlay" >
         </div>
@@ -84,3 +84,4 @@ require plugin_dir_path( __FILE__ ) . '/inc/user-edit/user-edit-form.php';
 require plugin_dir_path( __FILE__ ) . '/inc/gf/gf-hooks.php';
 require plugin_dir_path( __FILE__ ) . '/inc/short_code_membre.php';
 require plugin_dir_path( __FILE__ ) . '/inc/search-membre.php';
+require plugin_dir_path( __FILE__ ) . '/member-page-select/member-page-select.php';

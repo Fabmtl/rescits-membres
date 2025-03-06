@@ -1,0 +1,36 @@
+{
+	"apiVersion": 3,
+	"name": "lfdb/page-selector",
+	"title": "Sélecteur de Page Parent et Enfants",
+	"category": "widgets",
+	"icon": "admin-page",
+	"description": "Permet de sélectionner une page parent et d'afficher ses pages enfants.",
+	"attributes": {
+	  "parentPageId": {
+		"type": "number",
+		"default": 0
+	  },
+	  "currentPageTitle": {
+		"type": "string",
+		"default": 0
+	  },
+	  "selectedPages": {
+		"type": "array",
+		"default": [],
+		"items": {
+		  "type": "object",
+		  "properties": {
+			"id": { "type": "number" },
+			"title": { "type": "string" },
+			"link": { "type": "string" }
+		  }
+		}
+	  }
+	},
+	"editorScript": "file:./index.js",
+	"editorStyle": "file:./index.css",
+	"viewScript": "file:./view.js",
+	"style": "file:./style-index.css",
+	"viewStyle": "file:./view.css"
+  }
+  
