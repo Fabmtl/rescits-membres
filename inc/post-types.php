@@ -56,4 +56,4 @@ function rescits_membre_post_type() {
 	register_post_type( 'membre_rescits', $args );
 
 }
-add_action( 'init', 'rescits_membre_post_type', 0 );
+// add_action( 'init', 'rescits_membre_post_type', 0 );

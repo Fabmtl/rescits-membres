@@ -76,7 +76,11 @@ function popover_footer(){
 <?php 
 }
 add_action( 'wp_footer', 'popover_footer' );
+
+// 
+
 require plugin_dir_path( __FILE__ ) . '/inc/post-types.php';
 require plugin_dir_path( __FILE__ ) . '/inc/user-edit/user-edit-form.php';
 require plugin_dir_path( __FILE__ ) . '/inc/gf/gf-hooks.php';
 require plugin_dir_path( __FILE__ ) . '/inc/short_code_membre.php';
+require plugin_dir_path( __FILE__ ) . '/inc/search-membre.php';
