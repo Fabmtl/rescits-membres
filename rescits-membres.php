@@ -23,7 +23,7 @@ register_activation_hook(__FILE__, 'rescits_add_user_roles');
 function rescits_membres_styles()
 {
     global $post;
-    if( is_page(array(52,1770,1765,2203)) ){ //liste des membres
+    if( is_page(array(52,1770,1765,2203,2233)) ){ //liste des membres
         wp_enqueue_style('rescits-membres-style', plugin_dir_url(__FILE__) . '/assets/css/front.css', array(), false, "screen");
         wp_enqueue_script('rescits-modal-membres', plugin_dir_url(__FILE__) . "/assets/js/modal-membres-min.js", array('jquery'), null, true);
         wp_enqueue_script('rescits-apparition-membres', plugin_dir_url(__FILE__) . "/assets/js/apparition-des-membres-min.js", array('jquery'), null, true);
@@ -59,7 +59,7 @@ function rescits_add_profile_role_to_body_class($classes)
 }
 
 function popover_footer(){
-    if( is_page( [52,2203] ) ){ //liste des membres
+    if( is_page( [52,2203,2233] ) ){ //liste des membres
         ?>
         <div id="modal-overlay" >
         </div>
