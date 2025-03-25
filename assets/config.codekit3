@@ -7,7 +7,7 @@
       "uuidString" : "A54BDE8A-CF28-4829-9393-06FC8FCB0333"
     }
   ],
-  "creatorBuild" : "34680",
+  "creatorBuild" : "34689",
   "files" : {
     "\/css\/admin.css" : {
       "aP" : 1,
@@ -126,8 +126,8 @@
       "pg" : 0
     },
     "\/scss\/front.scss" : {
-      "aP" : 0,
-      "bl" : 0,
+      "aP" : 1,
+      "bl" : 1,
       "co" : 0,
       "ec" : 1,
       "ft" : 4,
@@ -135,7 +135,7 @@
       "oA" : 0,
       "oAP" : "\/css\/front.css",
       "oF" : 2,
-      "oS" : 0,
+      "oS" : 3,
       "pg" : 0
     }
   },
@@ -448,8 +448,6 @@
     "buildFolderActive" : 0,
     "buildFolderName" : "build",
     "cleanBuild" : 1,
-    "cssoForceMediaMerge" : 0,
-    "cssoRestructure" : 1,
     "environmentVariableEntries" : [
       "NODE_ENV:::production"
     ],

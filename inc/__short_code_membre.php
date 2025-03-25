@@ -1,33 +1,8 @@
 <?php
 
-    function get_users_by_id(){
+    function rescits_get_users_by_id($users, $type ){
+        $output = '';
 
-    }
-    
-    function custom_membre_shortcode($atts)
-    {
-
-        // Attributes
-        $atts = shortcode_atts(
-            [
-                'type' => '',
-            ],
-            $atts,
-            'membre'
-        );
-
-        $args = [
-            'role'    => $atts['type'],
-            'orderby' => 'user_nicename',
-            'order'   => 'ASC',
-        ];
-
-        
-        $users = get_users($args);
-
-        // ob_start();
-        // $output = ob_get_clean();
-        $output = '<ul class="user-list default-list-membres">';
 
         foreach ($users as $user) {
 
@@ -41,7 +16,8 @@
             $lien       = false;
             $bio        = false;
             
-            switch ($atts['type']) {
+
+            switch ($type) {
                 case 'membre_collaborateur_citoyen':
                     /**
                      * membre_collaborateur_milieux_cpc_titre
@@ -127,12 +103,39 @@
                             <?php endif; ?>
                         
                     </li>
-                <?php
-                    $output .= ob_get_clean();
-                        }
+        <?php
+            $output .= ob_get_clean();
+            
+    }
+    return $output;
+}
+    
+    function custom_membre_shortcode($atts)
+    {
 
-                        $output .= '</ul>';
+        // Attributes
+        $atts = shortcode_atts(
+            [
+                'type' => '',
+            ],
+            $atts,
+            'membre'
+        );
 
-                        return $output;
-                }
+        $args = [
+            'role'    => $atts['type'],
+            'orderby' => 'user_nicename',
+            'order'   => 'ASC',
+        ];
+
+        
+        $users = get_users($args);
+
+        // ob_start();
+        // $output = ob_get_clean();
+        $output = '<ul class="user-list">';
+        $output .= rescits_get_users_by_id($users, $atts['type']);
+        $output .= '</ul>';
+        return $output;
+    }
 add_shortcode('membre', 'custom_membre_shortcode');

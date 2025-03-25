@@ -27,6 +27,11 @@ function rescits_membres_styles()
         wp_enqueue_style('rescits-membres-style', plugin_dir_url(__FILE__) . '/assets/css/front.css', array(), false, "screen");
         wp_enqueue_script('rescits-modal-membres', plugin_dir_url(__FILE__) . "/assets/js/modal-membres-min.js", array('jquery'), null, true);
         wp_enqueue_script('rescits-apparition-membres', plugin_dir_url(__FILE__) . "/assets/js/apparition-des-membres-min.js", array('jquery'), null, true);
+
+        wp_localize_script('rescits-modal-membres', 'rescits_membres_ajax', array(
+            'ajax_url' => admin_url('admin-ajax.php'),
+            'nonce' => wp_create_nonce('rescits_nonce')
+        ));
     }
 }
 add_action('wp_enqueue_scripts', 'rescits_membres_styles', 999);
